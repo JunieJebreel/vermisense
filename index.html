@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>VermiSense Homepage Design</title>
+      <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <section class="header">
+      <nav>
+
+        <div class="nav-center">
+          <img src="images/logo.png" alt="Logo">
+          <span class="logo-text">VermiSense</span>
+        </div>
+
+        <div class="nav-links">
+          <ul>
+            <a href="login_register.html" class="btn">Log In/Register</a>
+
+          </ul>
+        </div>
+
+        <div class="text-box">
+          <h1 class="typing-text">Your <span class="highlight">journey</span> starts here.</h1>
+          <p>Discover our innovative research project designed to optimize and monitor vermicomposting processes. 
+            Our system helps track key factors like temperature, moisture, and pH to ensure efficient organic waste breakdown and healthier compost production. Join us in promoting sustainable waste management through smart technology!</p>
+            <a href="#background" class="hero-btn">Visit Us To Know More</a>
+        </div>
+        <!-- the links for the fonts, dapat mag add ug family daghan na fonts para one link rani -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+      </nav>
+    </section>
+    <section id="background" class="timeline-section">
+      <h2 class="timeline-title">Our Journey in Smart Vermicomposting</h2>
+      <div class="timeline">
+        
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <h3>🌱 The Problem</h3>
+            <p>
+              Traditional vermicomposting relies on manual monitoring of environmental factors like temperature, moisture, and pH—often leading to inconsistent compost quality.
+            </p>
+          </div>
+        </div>
+    
+        <div class="timeline-item right">
+          <div class="timeline-content">
+            <h3>💡 The Idea</h3>
+            <p>
+              We envisioned an automated system that integrates IoT sensors to continuously track these conditions—bringing precision and efficiency to vermicast production.
+            </p>
+          </div>
+        </div>
+    
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <h3>🔧 The Build</h3>
+            <p>
+              With sensors for moisture, temperature, and pH connected to a microcontroller and cloud-based visualization (ThingSpeak), VermiSense was born.
+            </p>
+          </div>
+        </div>
+    
+        <div class="timeline-item right">
+          <div class="timeline-content">
+            <h3>📊 The Impact</h3>
+            <p>
+              VermiSense empowers farmers and researchers with real-time insights, consistent vermicast quality, and minimal manual intervention.
+            </p>
+          </div>
+        </div>
+    
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <h3>🌍 The Vision</h3>
+            <p>
+              We aim to scale VermiSense into a sustainable solution promoting eco-friendly agriculture and smart waste management.
+            </p>
+          </div>
+        </div>
+    
+      </div>
+    </section>   
+    <script>
+      const timelineItems = document.querySelectorAll('.timeline-item');
+    
+      function revealOnScroll() {
+        const triggerBottom = window.innerHeight * 0.85;
+    
+        timelineItems.forEach(item => {
+          const boxTop = item.getBoundingClientRect().top;
+    
+          if (boxTop < triggerBottom) {
+            item.style.opacity = 1;
+            item.style.transform = "translateY(0)";
+          }
+        });
+      }
+    
+      window.addEventListener('scroll', revealOnScroll);
+      window.addEventListener('load', revealOnScroll);
+    </script>     
+
+  </body>
+  </html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login & Register - VermiSense</title>
+  <link rel="stylesheet" href="login_register.css" />
+</head>
+<body>
+
+  <section class="login-register-container">
+    <div class="form-container">
+      <!-- Tabs for Login and Registration -->
+      <div class="tabs">
+        <button class="tab-btn active" id="login-tab" onclick="showLogin()">Login</button>
+        <button class="tab-btn" id="register-tab" onclick="showRegister()">Register</button>
+      </div>
+
+      <!-- Login Form -->
+      <div class="form-content" id="login-form">
+        <h2>User portal</h2>
+        <form action="#" method="POST">
+          <div class="input-field">
+            <label for="login-email">Email</label>
+            <input type="email" id="login-email" name="email" required />
+          </div>
+          <div class="input-field">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" name="password" required />
+          </div>
+          <button type="submit" class="submit-btn">Login</button>
+        </form>
+      </div>
+
+      <!-- Register Form -->
+      <div class="form-content" id="register-form" style="display: none;">
+        <h2>Create new account</h2>
+        <form action="#" method="POST">
+          <div class="input-field">
+            <label for="register-name">Full Name</label>
+            <input type="text" id="register-name" name="name" required />
+          </div>
+          <div class="input-field">
+            <label for="register-email">Email</label>
+            <input type="email" id="register-email" name="email" required />
+          </div>
+          <div class="input-field">
+            <label for="register-password">Password</label>
+            <input type="password" id="register-password" name="password" required />
+          </div>
+          <button type="submit" class="submit-btn">Sign up</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function showLogin() {
+      document.getElementById('login-form').style.display = 'block';
+      document.getElementById('register-form').style.display = 'none';
+      document.getElementById('login-tab').classList.add('active');
+      document.getElementById('register-tab').classList.remove('active');
+    }
+
+    function showRegister() {
+      document.getElementById('login-form').style.display = 'none';
+      document.getElementById('register-form').style.display = 'block';
+      document.getElementById('register-tab').classList.add('active');
+      document.getElementById('login-tab').classList.remove('active');
+    }
+  </script>
+  <script src="login-register.js"></script>
+
+</body>
+</html>

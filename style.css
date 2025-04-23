@@ -1,0 +1,285 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/main background.jpg');
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2% 6%;
+}
+
+.nav-center {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-center img {
+  width: 100px;
+}
+
+.logo-text {
+  font-weight: bold;
+  color: white;
+  font-family: "Raleway", sans-serif;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.nav-links ul {
+  list-style: none;
+}
+
+.nav-links ul li {
+  display: inline-block;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: white;
+  color: #553805;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+  font-family: "Montserrat", sans-serif;
+}
+
+.btn:hover {
+  background-color: hsla(40, 100%, 71%, 0.767);
+  color: #553805;
+  transform: scale(1.05);
+}
+
+.text-box {
+  width: 90%;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Typing text animation */
+.typing-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3em;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid rgba(255,255,255,0.75); /* Cursor */
+  width: 0;
+  margin: 0 auto; /* Center horizontally */
+  animation: typing 4s steps(35, end) forwards, stop-blink 4s forwards; 
+  text-align: center;
+}
+
+
+/* Highlight "journey" */
+.typing-text .highlight {
+  color: #00ffb3;
+  font-weight: 700;
+}
+
+/* Typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* Blinking cursor effect */
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: rgba(255,255,255,0.75); }
+}
+@keyframes stop-blink {
+  from, to {
+    border-color: rgba(255,255,255,0.75);
+  }
+  100% {
+    border-right: none;
+  }
+}
+
+
+.text-box p {
+  margin: 10px auto 30px;
+  font-size: 14px;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  max-width: 1000px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.hero-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px 34px;
+  font-size: 13px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+.hero-btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav-center img,
+.logo-text,
+.nav-links .btn,
+.text-box p,
+.hero-btn {
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.nav-center img { animation-delay: 0.2s; }
+.logo-text { animation-delay: 0.4s; }
+.nav-links .btn { animation-delay: 0.6s; }
+.text-box p { animation-delay: 1s; }
+.hero-btn { animation-delay: 1.2s; }
+.timeline-section {
+  background: #fffdf7;
+  padding: 100px 20px;
+  position: relative;
+}
+
+.timeline-title {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 60px;
+  color: #553805;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #553805;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.timeline-item {
+  padding: 20px 30px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-out;
+}
+
+.timeline-item.left {
+  left: 0;
+}
+
+.timeline-item.right {
+  left: 50%;
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  width: 25px;
+  height: 25px;
+  background-color: #553805;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-item.left::after {
+  right: -13px;
+}
+
+.timeline-item.right::after {
+  left: -13px;
+}
+
+.timeline-content {
+  padding: 20px 30px;
+  background-color: #f8f6f1;
+  position: relative;
+  border-radius: 6px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.timeline-content h3 {
+  font-family: "Poppins", sans-serif;
+  color: #553805;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.timeline-content p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 768px) {
+  .timeline::after {
+    left: 31px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  .timeline-item.right {
+    left: 0%;
+  }
+
+  .timeline-item.left::after, .timeline-item.right::after {
+    left: 18px;
+  }
+}
